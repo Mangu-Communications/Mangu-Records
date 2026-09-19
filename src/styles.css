@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0a0909;
+  --color-foreground: #f3eeeb;
+  --color-card: #141211;
+  --color-elevated: #1c1918;
+  --color-secondary: #221e1c;
+  --color-muted: #9c928c;
+  --color-muted-foreground: #9c928c;
+  --color-subtle: #6e6662;
+  --color-primary: #d4452a;
+  --color-primary-foreground: #fff7f4;
+  --color-border: #2a2523;
+  --color-ring: #d4452a;
+  --color-destructive: #b42318;
+  --color-input: #1c1918;
+
+  --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Instrument Serif", "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-border: 0 0 0 1px rgb(255 255 255 / 0.08);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    height: 100%;
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    letter-spacing: -0.011em;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-primary) 40%, transparent);
+    color: var(--color-foreground);
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+}
+
+.studio-app {
+  min-height: 100dvh;
+  background:
+    radial-gradient(1200px 480px at 12% -10%, rgb(212 69 42 / 0.07), transparent 55%),
+    var(--color-background);
+}
+
+.arrange-grid {
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent calc(var(--beat) - 1px),
+      color-mix(in oklab, var(--color-foreground) 6%, transparent) calc(var(--beat) - 1px),
+      color-mix(in oklab, var(--color-foreground) 6%, transparent) var(--beat)
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent calc(var(--beat) * 4 - 1px),
+      color-mix(in oklab, var(--color-foreground) 14%, transparent) calc(var(--beat) * 4 - 1px),
+      color-mix(in oklab, var(--color-foreground) 14%, transparent) calc(var(--beat) * 4)
+    );
+}
+
+.fader-rail {
+  writing-mode: vertical-lr;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

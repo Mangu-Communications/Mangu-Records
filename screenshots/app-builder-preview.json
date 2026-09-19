@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Hathor Forge",
+      "hasCanvas": false,
+      "bodyTextLen": 1691,
+      "bodyTextHash": "602e372997ae39a1dc2386d23b6ce234ef7891f37b1485a3c8c88ec1f59d5391",
+      "bodyTextPrefix": "Hathor FORGE Templates Ember Protocol Night Shift Wire Still Air",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Hathor Forge",
+      "hasCanvas": false,
+      "bodyTextLen": 753,
+      "bodyTextHash": "7d671f81cef4514999852b4cd81cba640ad55fc2cc323812484518280c1af274",
+      "bodyTextPrefix": "Hathor FORGE 0:00 1.1 / 0:20 · 4/4 MASTER TRACKS 1 2 3 4 5 6 7 8",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
